@@ -22,12 +22,12 @@ class Survey {
   // Получение данных для инициализации виджета виджета
   getSurveyData = () => {
     return {
-      survey_question: "Вопрос?",
+      survey_question: "Кто вы?",
       total_number_participants: 100,
       survey_options: [
-        { name: "Ответ_1", number_participants: 45, selected: false },
-        { name: "Ответ_2", number_participants: 5, selected: false },
-        { name: "Ответ_3", number_participants: 50, selected: false }
+        { name: "Интроверт", number_participants: 45, selected: false },
+        { name: "Экстраверт", number_participants: 5, selected: false },
+        { name: "Не знаю ", number_participants: 50, selected: false }
       ]
     }
   }
