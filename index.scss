@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.survey_app_wrapper {
+  font-family: "Roboto", sans-serif;
+  margin: 20px auto;
+  padding: 35px 40px;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #454545;
+  color: #fff;
+
+  .survey_header {
+    text-align: center;
+
+    .survey_header__question {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 35px;
+    }
+    .survey_participants {
+      font-weight: 500;
+      line-height: 16px;
+      font-size: 12px;
+    }
+  }
+
+  .survey_main {
+    .survey_option {
+      margin: 20px 0;
+      width: 100%;
+      background: #ffffff14;
+      padding: 5px 10px;
+      border-radius: 5px;
+      position: relative;
+
+      &.not_selected {
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+          background: #ffffff50;
+        }
+      }
+
+      .interest, .interest_text {
+        position: absolute;
+        top: 0;
+        padding: 5px 10px;
+      }
+
+      .interest {
+        left: 0;
+        border-radius: 5px;
+        background: #ffffff16;
+        white-space: nowrap;
+        height: 100%;
+        box-sizing: border-box;
+        &.selected {
+          background: #ffffff80;
+        }
+      }
+
+      .interest_text {
+        right: 0;
+        &.selected {
+          &::before {
+            content: "";
+            background: url(./check.svg) no-repeat;
+            height: 100%;
+            width: 20px;
+            display: block;
+            position: absolute;
+            left: -20px;
+          }
+        }
+      }
+    }
+  }
+}
